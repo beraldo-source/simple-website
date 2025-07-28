@@ -1,7 +1,7 @@
 // Inicializa o mapa
 const map = L.map('map').setView([-22.8720, -47.0578], 13); 
 
-// Adiciona um tile layer
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
 }).addTo(map);
@@ -16,13 +16,13 @@ function fetchDenuncias() {
             return response.json();
         })
         .then(denuncias => {
-            console.log('Denúncias:', denuncias); // Log para ver as denúncias
+            console.log('Denúncias:', denuncias); 
             if (denuncias.length === 0) {
                 console.log('Nenhuma denúncia encontrada.');
                 return;
             }
             denuncias.forEach(denuncia => {
-                console.log('Denúncia atual:', denuncia); // Log para ver cada denúncia
+                console.log('Denúncia atual:', denuncia); 
                 const coords = denuncia.localizacao.split(',').map(Number);
                 
                 // Cria o marcador e adiciona ao mapa
@@ -30,10 +30,10 @@ function fetchDenuncias() {
 
                 // Adiciona um evento de clique ao marcador para abrir o popup
                 marker.on('click', function() {
-                    // Remove qualquer popup previamente vinculado
+                    // Remove qualquer popup
                     this.unbindPopup();
 
-                    // Cria o conteúdo do popup
+                    // Cria o conteudo do popup
                     let popupContent = `<strong>Tipo de Denúncia:</strong> ${denuncia.tipo_violacao ? denuncia.tipo_violacao : 'Não especificado'}<br>`;
                     
                     if (denuncia.imagem) {

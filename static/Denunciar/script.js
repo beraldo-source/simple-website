@@ -6,19 +6,19 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { //-22.834603
 
 
 
-// Variáveis para armazenar coordenadas
+
 let coordenadas = null;
 
 
-// Variável para armazenar o marcador atual
+
 let marcadorAtual = null;
 
-// Função para capturar coordenadas ao clicar no mapa
+
 map.on('click', function(e) {
     coordenadas = e.latlng;
     document.getElementById('localizacao').value = `${coordenadas.lat}, ${coordenadas.lng}`;
     
-    // Se já existe um marcador, remova-o
+    // Se já existe um marcador, tira ele
     if (marcadorAtual) {
         map.removeLayer(marcadorAtual);
     }
@@ -40,7 +40,7 @@ map.on('click', function(e) {
 
 
 
-// Exibir ou ocultar campos de identificação
+
 document.getElementById('anonymo').addEventListener('change', function() {
     const identFields = document.getElementById('identificacao');
     if (this.value === 'nao') {
@@ -50,7 +50,7 @@ document.getElementById('anonymo').addEventListener('change', function() {
     }
 });
 
-// Enviar o formulário
+
 document.getElementById('denunciaForm').addEventListener('submit', function(event) {
     event.preventDefault();
 

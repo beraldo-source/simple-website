@@ -16,13 +16,13 @@ function openModal(imageSrc) {
     
     modal.style.display = "block";
     modalImage.src = imageSrc;
-    caption.innerHTML = ""; // Limpa o texto do caption
+    caption.innerHTML = ""; 
 
     // Ocultar o mapa
     map.getContainer().style.visibility = 'hidden';
 }
 
-// Função para fechar o modal
+
 function closeModal() {
     const modal = document.getElementById("imageModal");
     modal.style.display = "none";
@@ -60,7 +60,7 @@ function addMarker(lat, lng, tipoViolacao, detalhes, nome, rg, imagens, id, id_a
 }
 
 function deletarDenuncia(id) {
-    console.log(`Tentando deletar a denúncia com ID: ${id}`); // Verifique se o ID está correto
+    console.log(`Tentando deletar a denúncia com ID: ${id}`); // Verifique se o ID ta cert
     fetch(`/api/deletar_denuncia/${id}`, {
         method: 'DELETE'
     })
@@ -83,7 +83,7 @@ fetch('/api/denuncias')
     .then(response => response.json())
     .then(data => {
         data.forEach(denuncia => {
-            // Aqui você deve extrair a latitude e longitude da localização
+            
             const [lat, lng] = denuncia.localizacao.split(',').map(Number);
             addMarker(lat, lng, denuncia.tipo_violacao, denuncia.detalhes, denuncia.nome, denuncia.rg, denuncia.imagem, denuncia.id_denuncia, denuncia.id_admin, denuncia.id_visita);
         });

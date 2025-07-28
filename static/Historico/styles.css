@@ -1,34 +1,34 @@
 
 #abas {
-    display: flex; /* Ativa o Flexbox */
-    padding: 0; /* Remove o preenchimento do nav */
-    margin-left: 1300px; /* Move todo o nav para a esquerda */
+    display: flex;
+    padding: 0;
+    margin-left: 1300px; 
     
 }
 
 #abas ul {
-    list-style: none; /* Remove os marcadores da lista */
-    padding: 0; /* Remove o preenchimento padrão da lista */
-    margin: 0; /* Remove a margem padrão da lista */
-    display: flex; /* Ativa o Flexbox para a lista */
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
 }
 
 #abas ul li {
-    margin-left: 20px; /* Adiciona espaço entre os itens da lista */
-    position: relative; /* Ativa o posicionamento relativo, deixa apenas a aba para mecher */
-    top: 10px; /* Move o item 10px para baixo */
+    margin-left: 20px; 
+    position: relative; 
+    top: 10px; 
 }
 
 #abas ul li a {
-    color: red; /* Define a cor do texto como vermelho */
+    color: red; 
     font-family: sans-serif;
     font-weight: bold;
-    text-decoration: none; /* Remove o sublinhado dos links */
-    padding: 10px; /* Adiciona algum espaço em volta do texto */
+    text-decoration: none; 
+    padding: 10px; 
 }
 
 #abas ul li a:hover {
-    color: black; /* Define a cor do texto como vermelho */
+    color: black; 
 }
 
 
@@ -59,7 +59,7 @@
 
 
 h1 {
-    grid-column: 1 / span 2; /* Ocupa ambas as colunas */
+    grid-column: 1 / span 2; 
     text-align: center;
     color: red;
     margin-bottom: 70px;
@@ -68,11 +68,11 @@ h1 {
 
 
 #map {
-    height: 600px; /* Altura do mapa */
-    width: 1500px; /* Largura do mapa */
-    border-radius: 8px; /* Cantos arredondados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-    background-color: #fff; /* Cor de fundo do mapa */
+    height: 600px; 
+    width: 1500px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    background-color: #fff; 
     margin: 0 auto;
     margin-bottom: 70px;
 }
@@ -80,10 +80,10 @@ h1 {
 
 
 body {
-    background-color: #f0f0f0; /* Cor de fundo suave */
-    font-family: Arial, sans-serif; /* Fonte padrão */
-    margin: 0; /* Remove margens padrão */
-    padding: 0; /* Remove preenchimento padrão */
+    background-color: #f0f0f0; 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
 }
 
 
@@ -100,11 +100,11 @@ body {
 
 
 footer {
-    background-color: #c5b036; /* Cor bege */
+    background-color: #c5b036;
     text-align: center;
     padding: 20px 0;
-    width: 100%; /* Define uma largura menor */
-    margin: 0 auto; /* Centraliza o rodapé na página */
+    width: 100%; 
+    margin: 0 auto;
 }
 
 .social-icons {
@@ -129,5 +129,5 @@ footer p {
 }
 
 .social-icons a:hover img {
-    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.2); 
 }
