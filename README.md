@@ -3,7 +3,7 @@
 [PT/BR] Um site simples desenvolvido como parte de um projeto acadêmico, em outubro de 2024.  
 [EN] A simple website developed as part of a college project in October 2024.
 
-[PT/BR] Inicialmente foi feito em um GitHub separado(https://github.com/GusTur-CPU/ProjetoIntegrador), mas estou upando aqui pois esse GitHub é da universidade.
+[PT/BR] Inicialmente foi feito em um GitHub separado(https://github.com/GusTur-CPU/ProjetoIntegrador), mas estou upando aqui pois esse GitHub é da universidade.  
 [EN] Initially, this project was created in a separate GitHub account (https://github.com/GusTur-CPU/ProjetoIntegrador), but I'm uploading it here because this GitHub belongs to the university.
 
 ---
