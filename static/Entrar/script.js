@@ -6,13 +6,13 @@ document.getElementById('togglePassword').addEventListener('click', function() {
     passwordInput.setAttribute('type', type);
     
     const icon = this.querySelector('i');
-    icon.classList.toggle('fa-eye'); // Troca para olho fechado
-    icon.classList.toggle('fa-eye-slash'); // Troca para olho aberto
+    icon.classList.toggle('fa-eye'); 
+    icon.classList.toggle('fa-eye-slash');
 });
 
 
 document.getElementById('login').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault();
 
     const formData = new FormData(this);
 
@@ -22,8 +22,8 @@ document.getElementById('login').addEventListener('submit', function(event) {
     })
     .then(response => {
         if (response.ok) {
-            // Se a resposta for bem-sucedida, redireciona ou faz o que for necessário
-            window.location.href = response.url; // Redireciona para a URL do painel
+            
+            window.location.href = response.url; 
         } else {
             return response.json().then(data => {
                 alert(data.error); // Exibe o erro em um alert
@@ -32,6 +32,6 @@ document.getElementById('login').addEventListener('submit', function(event) {
     })
     .catch(error => {
         console.error('Erro:', error);
-        alert('Ocorreu um erro ao tentar fazer login.'); // Exibe um erro genérico
+        alert('Ocorreu um erro ao tentar fazer login.'); 
     });
 });
