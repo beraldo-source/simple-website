@@ -1,0 +1,193 @@
+#abas {
+    display: flex; /* Ativa o Flexbox */
+    padding: 0; /* Remove o preenchimento do nav */
+    margin-left: 1300px; /* Move todo o nav para a esquerda */
+    
+}
+
+#abas ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+    display: flex; /* Ativa o Flexbox para a lista */
+}
+
+#abas ul li {
+    margin-left: 20px; /* Adiciona espaço entre os itens da lista */
+    position: relative; /* Ativa o posicionamento relativo, deixa apenas a aba para mecher */
+    top: 10px; /* Move o item 10px para baixo */
+}
+
+#abas ul li a {
+    color: red; /* Define a cor do texto como vermelho */
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px; /* Adiciona algum espaço em volta do texto */
+}
+
+#abas ul li a:hover {
+    color: black; /* Define a cor do texto como vermelho */
+}
+
+
+#descricao h1 {
+    color: black;
+    font-family: sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 0px;
+    position: relative;
+    margin-bottom: 70px; /* Espaco embaixo */
+}
+
+
+
+
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Container principal */
+.container {
+    
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+
+    grid-template-columns: 2fr 3fr; /* Formulário e mapa */
+    gap: 20px; /* Espaco entre os campos */
+    background: white;
+    padding: 30px; /* Espaco interno entre os campos */
+    border-radius: 8px; /* Rounding dos cantos */
+    box-shadow: 0px 4px 10px red; /* Sombra */
+    width: 50%; /* Largura */
+    position: relative; /* Para posicionar o formulário */
+    margin: auto; /* Coloca no Centro */
+    margin-bottom: 80px; /* Espaco embaixo */
+}
+
+
+h1 {
+    grid-column: 1 / span 2; /* Ocupa ambas as colunas */
+    text-align: center;
+    color: red;
+}
+
+
+#denunciaForm {
+    margin: auto; /* Centraliza o formulário */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaco entre os campos */
+    width: 100%; /* Largura do formulário */
+    max-width: 440px; /* Define uma largura máxima para o formulário */
+}
+
+#denunciaForm label {
+    font-weight: bold;
+    color: #555;
+}
+
+#denunciaForm input, #denunciaForm textarea, #denunciaForm select, #denunciaForm button {
+    width: 100%; /* Largura */
+    padding: 10px; /* Espaco interno */
+    font-size: 14px; /* Tamanho da fonte*/
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 4px; /* Rounding dos cantos */
+    outline: none; /* Não mostrar a linha de foco */
+    box-sizing: border-box; /* Para da parte de escrever seja do tamanho do box */
+}
+
+#denunciaForm button {
+    background-color: red; /* Cor de fundo */
+    color: white; /* Cor da fonte */
+    font-weight: bold; /* Fonte mais grossa */
+    cursor: pointer; /* Mostrar o cursor de ponteiro */
+    border: none; /* Não mostrar a borda */
+    transition: background 0.3s; /* Transição de fundo da cor do hover */
+}
+
+#denunciaForm button:hover {
+    background-color: black;
+}
+
+#identificacao label:first-of-type, #identificacao input:first-of-type { /* Colocar espaco entre o nome e rg */
+    margin-bottom: 10px;
+}
+
+
+#identificacao { /* width: 416px;   FICA CENTRALIZADO COM O RESTO*/
+    margin-top: 10px; /* Espaco em cima */
+    padding: 10px; /* Espaco interno */
+    border: 1px solid #e0e0e0; /* Borda */
+    border-radius: 4px; /* Rounding dos cantos */
+    background-color: #f9f9f9; /* Cor de fundo */
+    width: 418px;
+    margin-bottom: 15px;
+}
+
+/* Estilo do mapa */
+#map {
+    border: 2px solid #ccc; /* Borda do mapa */
+    border-radius: 8px; /* Cantos arredondados */
+    height: 300px; /* Altura do mapa */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        left: 0; /* Remove deslocamento */
+    }
+
+    #map {
+        height: 250px;
+    }
+}
+
+footer {
+    background-color: #c5b036; /* Cor bege */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Define uma largura menor */
+    margin: 0 auto; /* Centraliza o rodapé na página */
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+
+footer p {
+    font-size: 17px;
+    color: #333;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+
+
+
+
+
+
+

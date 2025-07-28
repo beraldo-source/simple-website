@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - EcoAjuda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Sobre/styles.css') }}">
+</head>
+<body>
+    <div>
+    <!-- Cabeçalho com Menu -->
+        <header>
+            <nav id="abas">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Menu</a></li>
+                    <li><a href="{{ url_for('denunciar') }}">Denunciar</a></li>
+                    <li><a href="{{ url_for('historico') }}">Histórico</a></li>
+                    <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                    <li><a href="{{ url_for('entrar') }}">Entrar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <!-- Informações sobre o site -->
+        <section id="descricao">
+            <h1>Sobre nós</h1>
+        </section>
+
+        <!-- Container Principal -->
+        <main>
+            <div class="container">
+                <h1>Estamos aqui para criar um melhor meio ambiente.</h1>
+                <p>Este site tem como objetivo promover a conscientização e a ação em relação às questões ambientais, permitindo que cidadãos denunciem práticas prejudiciais ao meio ambiente.</p>
+                
+                <h2>Objetivos de Desenvolvimento Sustentável (ODS)</h2>
+                
+                <h3>ODS 13: Ação Contra a Mudança Global do Clima</h3>
+                <p>O ODS 13 visa melhorar a educação, a conscientização e a capacidade humana e institucional sobre a mitigação das mudanças climáticas, a adaptação, a redução de seus impactos e a alerta precoce. É fundamental que todos nós façamos a nossa parte para reduzir as emissões de gases de efeito estufa e promover a resiliência climática.</p>
+                
+                <h3>ODS 15: Vida Terrestre</h3>
+                <p>O ODS 15 busca proteger, restaurar e promover o uso sustentável dos ecossistemas terrestres, gerir de forma sustentável as florestas, combater a desertificação, interromper e reverter a degradação da terra e interromper a perda de biodiversidade. Preservar a vida na Terra é essencial para garantir um futuro sustentável.</p>
+
+                <h3>Contato</h3>
+                <p>Nosso contato: ecoajuda@gmail.com</p>
+            </div>
+        </main>
+
+        <div class="image-container">
+            <img src="https://ods.pt/wp-content/uploads/2022/08/13.png" alt="OCD 13">
+            <img src="https://ods.pt/wp-content/uploads/2022/08/15.png" alt="OCD 15">
+        </div>
+
+        <!-- Rodapé -->
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.x.com" target="_blank">
+                    <img src="../../static/footer/x.png" alt="X"></a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../../static/footer/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../../static/footer/instagram.png" alt="Instagram">
+                </a>
+            </div>
+            <p>&copy; 2024 Direitos Autorais - EcoAjuda</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='Sobre/script.js') }}"></script> <!-- VER SE POE O DEFER -->
+</body>
+</html>

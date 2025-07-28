@@ -1,0 +1,172 @@
+
+#abas {
+    display: flex; /* Ativa o Flexbox */
+    padding: 0; /* Remove o preenchimento do nav */
+    margin-left: 1300px; /* Move todo o nav para a esquerda */
+    
+}
+
+#abas ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+    display: flex; /* Ativa o Flexbox para a lista */
+}
+
+#abas ul li {
+    margin-left: 20px; /* Adiciona espaço entre os itens da lista */
+    position: relative; /* Ativa o posicionamento relativo, deixa apenas a aba para mecher */
+    top: 10px; /* Move o item 10px para baixo */
+}
+
+#abas ul li a {
+    color: red; /* Define a cor do texto como vermelho */
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px; /* Adiciona algum espaço em volta do texto */
+}
+
+#abas ul li a:hover {
+    color: black; /* Define a cor do texto como vermelho */
+}
+
+
+#descricao h1 {
+    color: black;
+    font-family: sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 0px;
+    position: relative;
+}
+
+#descricao p {
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 0px;
+    bottom: 10px;
+    position: relative;
+}
+
+
+
+
+
+.visitas {
+    position: relative;
+    left: 80px;
+    color: black;
+    padding: 10px; /* Adiciona espaço interno */
+    border-radius: 5px; /* Arredonda os cantos do box */
+    display: inline-block; /* Faz o box se ajustar ao conteúdo */
+    box-shadow: 0 4px 10px red; /* Adiciona sombra ao box */
+}
+
+#contador {
+    color: red;
+}
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px; /* Largura máxima do slideshow */
+    margin: auto; /* Centraliza o slideshow */
+    overflow: hidden; /* Oculta partes que saem do contêiner */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-bottom: 150px;
+}
+
+.slide {
+    display: none; /* Inicialmente escondido */
+    opacity: 0; /* Começa invisível */
+    transition: opacity 1s ease; /* Transição suave para a opacidade */
+}
+
+.slide.active {
+    display: block; /* Exibe o slide ativo */
+    opacity: 1; /* Torna o slide ativo visível */
+}
+
+.slideshow-container img {
+    width: 100%; /* Imagem ocupa 100% do contêiner */
+    display: block
+}
+
+.prev, .next {
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    position: absolute; /* Posiciona as setas */
+    top: 50%; /* Centraliza verticalmente */
+    width: auto; /* Largura automática */
+    padding: 16px; /* Preenchimento */
+    color: white; /* Cor do texto */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 18px; /* Tamanho da fonte */
+    transition: 0.6s ease; /* Transição suave */
+    border-radius: 0 3px 3px 0; /* Cantos arredondados */
+    user-select: none; /* Desativa a seleção de texto */
+}
+
+.next {
+    right: 0; /* Posiciona à direita */
+    border-radius: 3px 0 0 3px; /* Ajusta cantos para a seta da direita */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro ao passar o mouse */
+}
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #c5b036; /* Cor bege */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Define uma largura menor */
+    margin: 0 auto; /* Centraliza o rodapé na página */
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+
+footer p {
+    font-size: 17px;
+    color: #333;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}

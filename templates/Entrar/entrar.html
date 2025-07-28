@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - EcoAjuda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Entrar/styles.css') }}">
+
+    <!-- FONT AWESOME PARA USAR O OLHINHO NA SENHA -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div>
+    <!-- Cabeçalho com Menu -->
+        <header>
+            <nav id="abas">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Menu</a></li>
+                    <li><a href="{{ url_for('denunciar') }}">Denunciar</a></li>
+                    <li><a href="{{ url_for('historico') }}">Histórico</a></li>
+                    <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                    <li><a href="{{ url_for('entrar') }}">Entrar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <!-- Informações sobre o site -->
+        <section id="descricao">
+            <p>Faça o Login Administrativo, caso você seja uma autoridade autorizada </p>
+        </section>
+
+        <!-- Container Principal -->
+        <main>
+            <div class="container">
+                <h2>Login</h2>
+                <form action="{{ url_for('login_admin') }}" method="POST" id="login">
+                    <div>
+                        <label for="username">Usuário:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="password-container">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password" required>
+                        <span id="togglePassword" class="eye-icon"><i class="fas fa-eye-slash"></i></span>
+                    </div>
+                    <div>
+                        <button type="submit">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.x.com" target="_blank">
+                    <img src="../../static/footer/x.png" alt="X"></a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../../static/footer/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../../static/footer/instagram.png" alt="Instagram">
+                </a>
+            </div>
+            <p>&copy; 2024 Direitos Autorais - EcoAjuda</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='Entrar/script.js') }}"></script> <!-- VER SE POE O DEFER -->
+</body>
+</html>

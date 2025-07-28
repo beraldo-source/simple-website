@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denúncias Ambientais</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Denunciar/styles.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div>
+        <!-- Cabeçalho com Menu -->
+            <header>
+                <nav id="abas">
+                    <ul>
+                        <li><a href="{{ url_for('index') }}">Menu</a></li>
+                        <li><a href="{{ url_for('denunciar') }}">Denunciar</a></li>
+                        <li><a href="{{ url_for('historico') }}">Histórico</a></li>
+                        <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                        <li><a href="{{ url_for('entrar') }}">Entrar</a></li>
+                    </ul>
+                </nav>
+            </header>
+    
+                <!-- Informações sobre o site -->
+            <section id="descricao">
+                <h1>EcoAjuda</h1>
+            </section>
+    
+            <div class="container">
+                <h1>Cadastro de Denúncias Ambientais</h1>
+                <form id="denunciaForm" enctype="multipart/form-data">
+                    <label for="tipoViolacao">Tipo de Violação:</label>
+                    <select id="tipoViolacao" required>
+                        <option value="" disabled selected>Selecione uma opção</option>
+                        <option value="Desmatamento Ilegal">Desmatamento Ilegal</option>
+                        <option value="Poluição">Poluição</option>
+                        <option value="Caça/Pesca Ilegal">Caça/Pesca Ilegal</option>
+                        <option value="Queimadas">Queimadas</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                
+                    <label for="detalhes">Detalhes:</label>
+                    <textarea id="detalhes" required></textarea>
+                
+                    <label for="localizacao">Localização:</label>
+                    <input type="text" id="localizacao" required>
+                
+                
+                    <label for="anonymo">Deseja ser anônimo?</label>
+                    <select id="anonymo">
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                
+                    <div id="identificacao" style="display: none;">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome">
+                        <label for="rg">RG:</label>
+                        <input type="text" id="rg" pattern="[0-9]*" title="Apenas números são permitidos">
+                    </div>
+                
+                    <label for="fotos">Anexar Fotos:</label>
+                    <input type="file" id="fotos" name = "fotos[]" accept="image/jpeg, image/png, image/gif" multiple>
+                    
+                
+                    <div id="map"></div>
+                    <button type="submit">Enviar Denúncia</button>
+                </form>
+            </div>
+    
+            <!-- Rodapé -->
+            <footer>
+                <div class="social-icons">
+                    <a href="https://www.x.com" target="_blank">
+                        <img src="../../static/footer/x.png" alt="X"></a>
+                    <a href="https://www.facebook.com" target="_blank">
+                        <img src="../../static/footer/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="../../static/footer/instagram.png" alt="Instagram">
+                    </a>
+                </div>
+                <p>&copy; 2024 Direitos Autorais - EcoAjuda</p>
+            </footer>
+        </div>
+
+
+
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='Denunciar/script.js') }}"></script>
+</body>
+</html>

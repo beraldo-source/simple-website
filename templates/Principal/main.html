@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoAjuda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Principal/styles.css') }}">
+</head>
+<body>
+    <div>
+    <!-- Cabeçalho com Menu -->
+        <header>
+            <nav id="abas">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Menu</a></li>
+                    <li><a href="{{ url_for('denunciar') }}">Denunciar</a></li>
+                    <li><a href="{{ url_for('historico') }}">Histórico</a></li>
+                    <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                    <li><a href="{{ url_for('entrar') }}">Entrar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <!-- Informações sobre o site -->
+        <section id="descricao">
+            <h1>Seja bem-vindo ao EcoAjuda!</h1>
+            <p>Nosso site permite que você veja e denuncie práticas prejudiciais ao meio ambiente.</p>
+        </section>
+        
+        <p class="visitas">Número total de visitas: <span id="contador">{{ total_visitas }}</span></p>
+       
+        <!-- Container Principal -->
+        <main>
+            <!-- Imagens em Slideshow -->
+            <div class="slideshow-container">
+                <div class="slide fade">
+                    <img src="{{ url_for('static', filename='Principal/Fotos-Principal/desmatamento1.png') }}" alt="Desmatamento 1">
+                </div>
+                <div class="slide fade">
+                    <img src="{{ url_for('static', filename='Principal/Fotos-Principal/queimadas1.png') }}" alt="Queimadas 1">
+                </div>
+                <div class="slide fade">
+                    <img src="{{ url_for('static', filename='Principal/Fotos-Principal/poluicao1.png') }}" alt="Poluição 1">
+                </div>
+                
+                <!-- Botões de navegação -->
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
+            
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.x.com" target="_blank">
+                    <img src="../../static/footer/x.png" alt="X"></a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../../static/footer/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../../static/footer/instagram.png" alt="Instagram">
+                </a>
+            </div>
+            <p>&copy; 2024 Direitos Autorais - EcoAjuda</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='Principal/script.js') }}"></script> <!-- VER SE POE O DEFER -->
+</body>
+</html>

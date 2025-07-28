@@ -1,0 +1,141 @@
+
+#abas {
+    display: flex; /* Ativa o Flexbox */
+    padding: 0; /* Remove o preenchimento do nav */
+    margin-left: 1300px; /* Move todo o nav para a esquerda */
+    
+}
+
+#abas ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+    display: flex; /* Ativa o Flexbox para a lista */
+}
+
+#abas ul li {
+    margin-left: 20px; /* Adiciona espaço entre os itens da lista */
+    position: relative; /* Ativa o posicionamento relativo, deixa apenas a aba para mecher */
+    top: 10px; /* Move o item 10px para baixo */
+}
+
+#abas ul li a {
+    color: red; /* Define a cor do texto como vermelho */
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    padding: 10px; /* Adiciona algum espaço em volta do texto */
+}
+
+#abas ul li a:hover {
+    color: black; /* Define a cor do texto como vermelho */
+}
+
+
+#descricao h1 {
+    color: black;
+    font-family: sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 0px;
+    position: relative;
+}
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* Fundo branco */
+    color: black; /* Texto preto */
+}
+
+.container {
+    max-width: 800px; /* Largura máxima do container */
+    margin: 20px auto; /* Centraliza o container */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    background-color: white; /* Fundo branco */
+}
+
+h1 {
+    text-align: center;
+    color: red; /* Cor do título principal */
+}
+
+h2 {
+    color: red; /* Cor do subtítulo */
+    margin-top: 20px; /* Espaçamento acima do subtítulo */
+}
+
+h3 {
+    color: red; /* Cor dos títulos dos ODS */
+    margin-top: 15px; /* Espaçamento acima dos títulos dos ODS */
+}
+
+p {
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin: 10px 0; /* Margens em cima e embaixo dos parágrafos */
+}
+
+.image-container {
+    display: flex; /* Ativa o Flexbox para as imagens */
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    margin-top: 20px; /* Espaço acima das imagens */
+    margin-bottom: 65px; 
+}
+
+.image-container img {
+    width: 200px; /* Define a largura fixa das imagens */
+    height: auto; /* Mantém a proporção das imagens */
+    margin: 0 60px; /* Aumenta o espaço entre as imagens para 20 pixels */
+    border-radius: 5px; /* Cantos arredondados das imagens */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #c5b036; /* Cor bege */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Define uma largura menor */
+    margin: 0 auto; /* Centraliza o rodapé na página */
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+
+footer p {
+    font-size: 17px;
+    color: #333;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}

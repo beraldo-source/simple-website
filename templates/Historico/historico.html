@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historico - EcoAjuda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Historico/styles.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <div>
+    <!-- Cabeçalho com Menu -->
+        <header>
+            <nav id="abas">
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Menu</a></li>
+                    <li><a href="{{ url_for('denunciar') }}">Denunciar</a></li>
+                    <li><a href="{{ url_for('historico') }}">Histórico</a></li>
+                    <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                    <li><a href="{{ url_for('entrar') }}">Entrar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+            <!-- Informações sobre o site -->
+        <section id="descricao">
+            <h1>EcoAjuda</h1>
+        </section>
+
+        <!-- Container Principal -->
+        <main>
+            <h1>Acompanhe as denúncias em tempo real!</h1>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </main>
+
+        <!-- Rodapé -->
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.x.com" target="_blank">
+                    <img src="../../static/footer/x.png" alt="X"></a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../../static/footer/facebook.png" alt="Facebook"></a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../../static/footer/instagram.png" alt="Instagram">
+                </a>
+            </div>
+            <p>&copy; 2024 Direitos Autorais - EcoAjuda</p>
+        </footer>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='Historico/script.js') }}"></script> <!-- VER SE POE O DEFER -->
+</body>
+</html>
